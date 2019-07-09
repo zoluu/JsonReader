@@ -1,0 +1,5 @@
+/*C4*/SET SCHEMA PUBLIC
+Create table if not exists Events (id varchar(255) not null, type varchar(255), host varchar(255), duration integer, alert boolean)
+INSERT INTO EVENTS VALUES('scsmbstgra','APPLICATION_LOG','12345',0,FALSE)
+COMMIT
+DISCONNECT
