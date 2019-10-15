@@ -37,7 +37,8 @@ public class JsonReader {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		JsonReader.begin("/Users/muhammadrahim/Desktop/test.json");
+		//JsonReader.begin("/Users/muhammadrahim/Desktop/test.json");
+		JsonReader.begin("src/test/resources/test.json");
 	}
 	
 	/**

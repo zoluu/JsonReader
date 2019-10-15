@@ -26,4 +26,22 @@ public class JsonReaderTest {
 		JsonReader.begin("src/test/resources/test.json");
 		server.stop();
 	}
+
+	@Test
+	public void testTwoJsonLines() {
+		server = new Server();
+
+		server.setDatabaseName(0, "test");
+		server.setDatabasePath(0, dbPath);
+		server.setLogWriter(null);
+		server.setErrWriter(null);
+		server.start();
+		try {
+			Class.forName("org.hsqldb.jdbc.JDBCDriver");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		JsonReader.begin("src/test/resources/test2.json");
+		server.stop();
+	}
 }
